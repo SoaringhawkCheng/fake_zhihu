@@ -1,0 +1,23 @@
+{% extends 'auth/base.html' %}
+
+{% block tab_navs %}
+<div class="index-tab-navs">
+	<div class="navs-slider" data-active-index="1">
+		<a href="#signup">注册</a>
+		<a href="#signin" class="active">登录</a>
+		<span class="navs-slider-bar"></span>
+	</div>
+</div>
+{% endblock %}
+
+{% block signin %}
+<div class="view view-signin" data-za-module="SignInForm" style="display: block;">
+	{% include 'auth/_signin_form.html' %}
+</div>
+{% endblock %}
+
+{% block signup %}
+<div class="view view-signup selected" data-za-module="SignUpForm" style="display: none;">
+	{% include 'auth/_signup_form.html' %}
+</div>
+{% endblock %}

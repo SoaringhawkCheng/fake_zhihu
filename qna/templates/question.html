@@ -1,0 +1,169 @@
+{% extends 'base2.html' %}
+
+{% block title %}
+{{ question.title }} - {{ super() }}
+{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/answer_editor.css') }}">
+{% endblock %}
+
+{% block content %}
+<main role="main" class="App-main">
+	<div>
+		<div data-za-module="QuestionItem" data-za-module-info="{}">
+			<div class="QuestionStatus"></div>
+			<div class="QuestionHeader">
+				<div class="QuestionHeader-content">
+					<meta itemprop="isTopQuestion" content="false">
+					<meta itemprop="visitsCount" content="693753">
+					<meta itemprop="answerCount" content="491">
+					<meta itemprop="followerCount" content="3636">
+					<div class="QuestionHeader-main">
+						<div class="QuestionHeader-topics">
+							{% for i in range(5) %}
+							<div class="Tag QuestionTopic">
+								<a class="TopicLink" href=""><div class="Popover"><div id="Popover-52496-72085-toggle" aria-haspopup="true" aria-expanded="false" aria-owns="Popover-52496-72085-content">互联网</div></div></a></span>
+							</div>
+							{% endfor %}
+						</div>
+						<h1 class="QuestionHeader-title">{{ question.title }}</h1>
+						<div class="QuestionHeader-detail">
+							<div class="QuestionRichText QuestionRichText--collapsed">
+								<div><span>{{ question.description }}</span></div>
+							</div>
+						</div>
+					</div>
+					<div class="QuestionHeader-side">
+						<div class="QuestionHeader-follow-status">
+							<div class="QuestionFollowStatus">
+								<div class="NumberBoard QuestionFollowStatus-counts">
+									<button class="Button NumberBoard-item Button--plain" type="button">
+										<div class="NumberBoard-name">关注者</div>
+										<div class="NumberBoard-value">0</div>
+									</button>
+									<div class="NumberBoard-divider"></div>
+									<div class="NumberBoard-item">
+										<div class="NumberBoard-name">被浏览</div>
+										<div class="NumberBoard-value">0</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="QuestionHeader-footer">
+					<div class="QuestionHeader-footer-inner">
+						<div class="QuestionHeader-main QuestionHeader-footer-main">
+							<div class="QuestionHeaderActions">
+								<div class="QuestionHeader-Comment"><button class="Button Button--plain" type="button"><svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" class="Icon Icon--comment Icon--left" width="20" height="15" aria-hidden="true" style="height: 15px; width: 20px;"><title></title><g><path d="M7.24 16.313c-.272-.047-.553.026-.77.2-1.106.813-2.406 1.324-3.77 1.482-.16.017-.313-.06-.394-.197-.082-.136-.077-.308.012-.44.528-.656.906-1.42 1.11-2.237.04-.222-.046-.45-.226-.588C1.212 13.052.027 10.73 0 8.25 0 3.7 4.03 0 9 0s9 3.7 9 8.25-4.373 9.108-10.76 8.063z"></path></g></svg>{{ question.comments.count() }} 条评论</button></div>
+								<div class="Popover ShareMenu">
+									<div id="Popover-52515-5946-toggle" aria-haspopup="true" aria-expanded="false" aria-owns="Popover-52515-5946-content">
+										<button class="Button Button--plain" type="button">
+											<svg viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg" class="Icon Icon--share Icon--left" width="13" height="16" aria-hidden="true" style="height: 16px; width: 13px;"><title></title><g><path d="M.93 3.89C-.135 4.13-.343 5.56.614 6.098L5.89 9.005l8.168-4.776c.25-.128.477.197.273.388L7.05 10.66l.926 5.953c.18 1.084 1.593 1.376 2.182.456l9.644-15.243c.584-.892-.212-2.03-1.234-1.796L.93 3.89z"></path></g></svg>分享
+										</button>
+									</div>
+								</div>
+								<button class="Button Button--plain" type="button"><svg viewBox="0 0 20 20" class="Icon Icon--star Icon--left" width="13" height="16" aria-hidden="true" style="height: 16px; width: 13px;"><title></title><g><path d="M3.515 17.64l.918-5.355-3.89-3.792c-.926-.902-.64-1.784.64-1.97L6.56 5.74 8.964.87c.572-1.16 1.5-1.16 2.072 0l2.404 4.87 5.377.783c1.28.186 1.566 1.068.64 1.97l-3.89 3.793.918 5.354c.22 1.274-.532 1.82-1.676 1.218L10 16.33l-4.808 2.528c-1.145.602-1.896.056-1.677-1.218z"></path></g></svg>邀请回答</button>
+								<button class="Button Button--plain" type="button">
+									<svg viewBox="0 0 18 20" class="Icon Icon--report Icon--left" width="11" height="16" aria-hidden="true" style="height: 16px; width: 11px;"><title></title><g><path d="M16.947 1.13c-.633.135-3.927.638-5.697.384-3.133-.45-4.776-2.54-9.95-.888C.305 1.04.025 1.664.025 2.646L0 18.807c0 .3.1.54.304.718.195.202.438.304.73.304.275 0 .52-.102.73-.304.202-.18.304-.418.304-.718v-6.58c4.533-1.235 8.047.668 8.562.864 2.343.893 5.542.008 6.774-.657.397-.178.596-.474.596-.887V1.964c0-.6-.42-.972-1.053-.835z"></path></g></svg>举报
+								</button>
+								<div class="Popover">
+									<button class="Button Button--plain" type="button" id="Popover-52519-4173-toggle" aria-haspopup="true" aria-expanded="false" aria-owns="Popover-52519-4173-content"><svg viewBox="0 0 18 4" class="Icon Icon--dots" width="14" height="16" aria-hidden="true" style="height: 16px; width: 14px;"><title></title><g><g><circle cx="2" cy="2" r="2"></circle><circle cx="9" cy="2" r="2"></circle><circle cx="16" cy="2" r="2"></circle></g></g></svg></button>
+								</div>
+							</div>
+							<div class="QuestionHeader-actions"></div>
+						</div>
+						<div class="QuestionHeader-side">
+							<div class="QuestionButtonGroup">
+								<button class="Button Button--primary Button--blue" type="button">关注问题</button>
+								<button class="Button Button--blue" type="button">
+									<svg viewBox="0 0 12 12" class="Icon Button-icon Icon--modify" width="14" height="16" aria-hidden="true" style="height: 16px; width: 14px;"><title></title><g><path d="M.423 10.32L0 12l1.667-.474 1.55-.44-2.4-2.33-.394 1.564zM10.153.233c-.327-.318-.85-.31-1.17.018l-.793.817 2.49 2.414.792-.814c.318-.328.312-.852-.017-1.17l-1.3-1.263zM3.84 10.536L1.35 8.122l6.265-6.46 2.49 2.414-6.265 6.46z" fill-rule="evenodd"></path></g></svg>写回答
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="Question-main">
+			<div class="Question-mainColumn">
+				<div>
+					<div id="QuestionAnswers-answers" class="QuestionAnswers-answers">
+						<div class="Card">
+							<div class="List">
+								<div class="List-header">
+									<h4 class="List-headerText"><span>{{ question.answers.count() }} 个回答</span></h4>
+									<div class="List-headerOptions">
+										<div class="Popover">
+											<button class="Button Select-button Select-plainButton Button--plain" role="combobox" aria-expanded="false" type="button" id="Popover-40277-67959-toggle" aria-haspopup="true" aria-owns="Popover-40277-67959-content">
+												默认排序<svg viewBox="0 0 8 13" class="Icon Select-arrow Icon--select" width="8" height="16" aria-hidden="true" style="height: 16px; width: 8px;"><title></title><g><path d="M4 11.183L1.284 8.218c-.293-.29-.77-.29-1.064 0-.293.29-.293.76 0 1.052l3.25 3.512c.292.29.768.29 1.062 0L7.78 9.27c.293-.29.293-.76 0-1.052-.295-.29-.77-.29-1.064 0L4 11.182zM4 1.818L1.284 4.782c-.293.29-.77.29-1.064 0-.293-.29-.293-.76 0-1.052L3.47.218c.292-.29.768-.29 1.062 0L7.78 3.73c.293.29.293.76 0 1.052-.295.29-.77.29-1.064 0L4 1.82z"></path></g></svg>
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<div>
+									{% for answer in answers %}
+									{% include '_answer_item.html' %}
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+
+						<div class="Card"><button class="Button QuestionMainAction" type="button">更多</button></div>
+					</div>
+
+					<!-- <div class="CollapsedAnswers-bar"><button class="Button Button--plain" type="button">2 个回答被折叠</button>（<a class="Button Button--plain" type="button" href="/question/20120168">为什么？</a>）</div> -->
+					{% if current_user.is_authenticated %}
+					{% include '_answer_add.html' %}
+					{% endif %}
+				</div>
+			</div>
+
+			<div class="Question-sideColumn Question-sideColumn--sticky" data-za-module="RightSideBar" data-za-module-info="{}">
+				<div>
+					<div class="Sticky">
+						<div class="Card" data-za-module="RelatedQuestions" data-za-module-info="{}">
+							<div class="Card-header SimilarQuestions-title"><div class="Card-headerText">相关问题</div></div>
+							<div class="Card-section SimilarQuestions-list">
+								{% for i in range(5) %}
+								<div class="SimilarQuestions-item">
+									<meta itemprop="url" content="">
+									<meta itemprop="answerCount" content="14037">
+									<meta itemprop="followerCount" content="160833">
+									<a class="Button Button--plain" target="_blank" type="button" href="">这是一个假的问题</a>10 个回答
+								</div>
+								{% endfor %}
+							</div>
+						</div>
+
+						<footer class="Footer">
+							<a class="Footer-item" target="_blank" href="https://liukanshan.zhihu.com/">刘看山</a>
+							<span class="Footer-dot"></span>
+							<a class="Footer-item" target="_blank" href="https://www.zhihu.com/question/19581624">知乎指南</a>
+							<span class="Footer-dot"></span>
+							<a class="Footer-item" target="_blank" href="https://www.zhihu.com/terms">知乎协议</a>
+							<span class="Footer-dot"></span>
+							<a class="Footer-item" target="_blank" href="https://www.zhihu.com/app">应用</a>
+							<span class="Footer-dot"></span>
+							<a class="Footer-item" target="_blank" href="https://www.zhihu.com/careers">工作</a>
+							<br>
+							<a class="Footer-item" target="_blank" href="https://www.zhihu.com/contact">联系我们</a>
+							<span> © 2017 知乎</span>
+						</footer>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script type="text/javascript" src="{{ url_for('static', filename='js/question.js') }}"></script>
+{% endblock %}

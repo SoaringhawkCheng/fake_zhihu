@@ -1,0 +1,1 @@
+@"e:\fbblog\venv\scripts\python.exe" "e:\fbblog\venv\Scripts\markdown_py" %*

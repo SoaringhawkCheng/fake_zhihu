@@ -1,0 +1,14 @@
+.editor-toolbar {
+	border: none;
+    border-top: 1px solid #e7eaf1;
+    border-bottom: 1px solid #e7eaf1;
+    background: #f7f8fa;
+}
+.CodeMirror {
+	font-size: 15px;
+	font-family: inherit;
+}
+.CodeMirror, .CodeMirror-scroll {
+	min-height: 100px;
+	border: none;
+}

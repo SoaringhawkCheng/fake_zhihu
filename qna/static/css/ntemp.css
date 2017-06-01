@@ -1,0 +1,81 @@
+.modal-dialog,div[contentEditable]{outline:0;-moz-outline:0}
+.zm-modal-dialog-guide-title,.zm-modal-dialog-guide-warn-message{padding:5px 9px;margin:0 0 15px;position:relative}
+.zm-modal-dialog-guide-title{background:none repeat scroll 0 0 #F7FBFD;border:1px solid #D2E1E8}
+.zm-modal-dialog-guide-warn-message{background:none repeat scroll 0 0 #f8f6e2;border:1px solid #ccc9ac!important;padding:5px 30px 5px 9px!important;margin:0 0 15px!important}
+.zm-modal-dialog-guide-title-spin{background:transparent url(/static/revved/img/sprites-1.9.2.4c54885a.png) scroll no-repeat -38px -902px;visibility:hidden;position:absolute;bottom:-11px;left:20px;width:16px;height:11px}
+.zm-modal-dialog-guide-title-msg{background:transparent url(/static/revved/img/sprites-1.9.2.4c54885a.png) scroll no-repeat -227px -174px;visibility:hidden;position:absolute;bottom:-11px;left:20px;width:16px;height:11px}
+#zm-modal-dialog-warnmsg-wrapper>.zm-modal-dialog-guide-title-spin,#zm-modal-dialog-warnmsg-wrapper>.zm-modal-dialog-guide-title-msg,.zm-modal-dialog-warnmsg-wrapper>.zm-modal-dialog-guide-title-spin,.zm-modal-dialog-warnmsg-wrapper>.zm-modal-dialog-guide-title-msg{bottom:-10px;z-index:1;visibility:visible;left:21px}
+.goog-zippy-expanded>.zm-modal-dialog-guide-title-spin{visibility:visible}
+.zm-modal-dialog-guide-title-dropdown{background:transparent url(/static/revved/img/sprites-1.9.2.4c54885a.png) scroll no-repeat -46px -674px;position:absolute;top:13px;right:10px;width:11px;height:6px}
+.goog-zippy-expanded>.zm-modal-dialog-guide-title-dropdown{background-position:-39px -934px;top:12px}
+.goog-zippy-collapsed>.zm-modal-dialog-guide-title-dropdown{background-position:-39px -928px;top:14px}
+.icon,.tr-icon,.tr-inline-icon,.goog-option-selected .goog-menuitem-checkbox,.zu-edit-button-icon,.zu-top-live-icon,.zh-global-backtotop,.zh-hovercard-arrow,.modal-dialog-title-close,.icon-external,.zg-icon,.zm-profile-icon,.zm-profile-header-icon,.icon-info,.icon-green-check,.icon-big-arrow-left,.icon-big-arrow-right,.icon-weibo,.icon-qzone,.icon-weibo-corner,.icon-big-white-sina,.icon-big-white-qq,.icon-big-white-mail,.icon-delete,.icon-edit{width:16px;height:16px;background-image:url(/static/images/sprites-1.9.2.4c54885a.png);background-repeat:no-repeat;display:inline-block;vertical-align:middle}
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:2dppx),(min-resolution:192dpi){.icon,i[class^=z-icon-],.modal-dialog-title-close,.goog-option-selected .goog-menuitem-checkbox,.zg-content-img-icon,.zg-content-video-icon,.tr-icon,.tr-inline-icon,.zg-icon,.icon-external,.feed-item .ignore,.side-topic-item .up,.side-topic-item .delete,.zu-edit-button-icon,.zg-blue-edit,.zm-add-question-detail-icon,.zh-hovercard-arrow,.zu-top-live-icon,.zm-item-top-btn,.zm-profile-icon,.zm-profile-header-icon,.zm-profile-empty-icon,.zu-global-notify-icon,.zu-global-notify-close,.zm-modal-dialog-guide-title-msg,.zm-modal-dialog-guide-title-dropdown,.zm-noti7-popup-tab-item .icon,.zu-noti7-popup .zu-top-live-icon,.icon-info,.icon-green-check,.icon-big-arrow-left,.icon-big-arrow-right,.icon-weibo,.icon-qzone,.icon-weibo-corner,.icon-big-white-sina,.icon-big-white-qq,.icon-big-white-mail,.icon-delete,.icon-edit{background-image:url(/static/revved/img/sprites-1.9.2@2x.6e638473.png);background-size:308px 250px}
+.Guide.modal-dialog{position:absolute;margin:0!important;width:100%;height:100%;box-shadow:none;border:0;border-radius:0;overflow-x:hidden;color:#444;background:rgba(255,255,255,.95);-webkit-align-self:baseline;-ms-flex-item-align:baseline;align-self:baseline}
+.Guide.modal-dialog .modal-dialog-title{display:none}
+.Guide.modal-dialog .modal-dialog-content{margin:0;padding:0}
+.Guide.modal-dialog .Guide-header,.Guide.modal-dialog .Guide-content,.Guide.modal-dialog .Guide-TopicsFooter{-webkit-animation:.3s fadeInUp ease-in;animation:.3s fadeInUp ease-in}
+.Guide.modal-dialog.fx-hide .Guide-header,.Guide.modal-dialog.fx-hide .Guide-content,.Guide.modal-dialog.fx-hide .Guide-TopicsFooter{-webkit-animation:.3s fadeOutDown ease-in;animation:.3s fadeOutDown ease-in}
+.zm-modal-dialog-warnmsg{margin:5px 0 5px 5px;border-left:3px solid #C3412F;padding:0 0 0 10px}
+.user-guiding-dialog .modal-dialog-content{margin:20px 0}
+.modal-dialog.bio-editor-modal{width:500px}
+.modal-dialog.bio-editor-modal .modal-dialog-content{margin:24px 0;padding:0 24px}
+.modal-dialog.bio-editor-modal .modal-dialog-content .bio-editor-modal-title{margin-bottom:24px}
+.modal-wrapper{position:fixed;top:0;left:0;right:0;bottom:0;z-index:99;overflow:auto;-webkit-overflow-scrolling:touch}
+html.modal-open.flexbox .modal-wrapper{display:-webkit-flex;display:-ms-flexbox;display:-webkit-box;display:flex;-webkit-justify-content:center;-ms-flex-pack:center;-webkit-box-pack:center;justify-content:center;-webkit-align-items:flex-start;-ms-flex-align:start;-webkit-box-align:start;align-items:flex-start}
+.modal-dialog{position:absolute;z-index:99;width:420px;max-width:100%;border-radius:8px;border:1px solid #888;box-shadow:0 0 80px 0 rgba(0,0,0,.4);background:#fff;text-align:left}
+html.modal-open .modal-wrapper .modal-dialog{position:static;margin-top:14%;margin-top:14vh}
+html.modal-open.no-flexbox .modal-wrapper .modal-dialog{margin-left:auto;margin-right:auto}
+html.modal-open.mobile .modal-wrapper .modal-dialog{margin-top:0}
+html.modal-open.no-flexbox .modal-wrapper .modal-dialog.centered{margin-top:50%}
+html.modal-open.flexbox .modal-wrapper .modal-dialog.centered{-ms-flex-item-align:center;-webkit-align-self:center;-ms-grid-row-align:center;align-self:center}
+.modal-dialog-bg{position:fixed;left:0;top:0;z-index:95;min-height:100%!important;width:100%!important;height:100%!important;overflow:visible;background:#666}
+.modal-dialog-title-close{position:absolute;top:50%;_top:20px;right:3px;width:30px;height:30px;margin-top:-15px;text-indent:-9999px;cursor:pointer;background-position:-60px -53px}
+.modal-dialog-title{position:relative;margin:-1px -1px 0;padding:10px 15px;line-height:14px;background:#1D7FE2;background:-webkit-linear-gradient(top,#1D7FE2,#0865C2);background:linear-gradient(to bottom,#1D7FE2,#0865C2);border:1px solid #0D6EB8;border-radius:6px 6px 0 0;box-shadow:0 1px 0 rgba(255,255,255,.1) inset,0 1px 1px rgba(0,0,0,.2)}
+.modal-dialog-title-draggable{cursor:move}
+.modal-dialog-title-text{color:#fff;text-shadow:0 1px 1px rgba(0,0,0,.4);font-size:15px;font-weight:700}
+.modal-dialog-content{padding:0 15px;margin:17px 0}
+.modal-dialog-buttons{padding:0 15px;margin-bottom:15px;text-align:right;background:#fff}
+.modal-dialog-buttons button[name=cancel]{border:0;color:#259;background:transparent;cursor:pointer;font-size:13px}
+html.no-touchevents .modal-dialog-buttons button[name=cancel]:hover{text-decoration:underline}
+.modal-dialog-buttons button+button{margin-left:1em}
+.modal-dialog .zm-command{padding:20px 0 0}
+.modal-dialog.with-button .modal-dialog-content{border-radius:0;border-bottom:0;font-size:14px}
+.modal-dialog.with-button .modal-dialog-buttons{display:block;padding:0 15px;border-top:0}
+.modal-dialog .textarea{width:100%;padding:8px 10px;border:1px solid #ccc;border-radius:4px;box-shadow:inset 0 0 4px 0 rgba(0,0,0,.1);box-sizing:border-box}
+.modal-dialog-cancelNoti{float:left;margin-top:20px;font-size:13px}
+.modal-dialog-async-loading{color:#999;text-align:center}
+.zu-top .modal-shifting{position:static!important}
+.zh-add-question-form #zm-modal-dialog-warnmsg-wrapper>.zu-global-notify-close,.zh-add-question-form .zm-modal-dialog-warnmsg-wrapper>.zu-global-notify-close{position:absolute;right:7px;top:7px;float:none;margin:0}
+html.modal-open.no-flexbox .modal-wrapper .mutiview-dialog{margin:14% auto auto}
+html.modal-open .modal-wrapper .mutiview-dialog{margin-top:0}
+.zm-light-box.modal-dialog{border-radius:0;background:transparent url(/static/revved/img/light_box_close.de97bb10.png) no-repeat 98% 16px;width:100%;position:fixed;top:0;left:0;right:0;bottom:0;overflow-x:hidden;overflow:auto;padding:0}
+.zm-light-box .modal-dialog-title{display:none}
+.zm-light-box .modal-dialog-content{padding:0;margin:0;width:100%;background:transparent}
+.modal-dialog-bg.zm-light-box-background{opacity:.9;-ms-filter:"alpha(Opacity=90)";background:#fff}
+.payment-dialog .modal-dialog-content{margin:24px 0 0;padding:0;text-align:center}
+.modal-dialog.settings-account-unlock-dialog{width:425px}
+.modal-dialog.settings-account-unlock-dialog .modal-dialog-content{padding:0}
+.report-dialog.loading .modal-dialog-buttons{display:none}
+.modal-dialog.shortcut-tips-dialog{width:550px}
+.modal-dialog.activate-dialog .modal-dialog-content{margin:0;padding:12px 15px}
+.modal-dialog.activate-dialog .tip{margin-bottom:17px;padding:10px 13px;color:#5B7BA0;background:#ecf4f8;border:1px solid #dbe6eb;border-radius:4px}
+.modal-dialog.activate-dialog .describe,.modal-dialog.activate-dialog .email,.modal-dialog.activate-dialog .actions{line-height:1;text-align:center}
+.modal-dialog.activate-dialog .describe{margin:22px 0 27px;color:#999}
+.modal-dialog.activate-dialog .email{color:#666;font-size:15px}
+.modal-dialog.activate-dialog .actions{color:#999;margin-top:22px;margin-bottom:15px}
+.modal-dialog.activate-dialog .actions .zg-bull{padding:0;color:#999}
+.modal-dialog.activate-dialog .actions a.resend-activation-email.disabled{color:#999;text-decoration:none}
+.modal-dialog.activate-dialog form.activate{display:none}
+.modal-dialog.activate-dialog form .input-wrapper{margin-bottom:15px}
+.modal-dialog.activate-dialog form .input-wrapper input.text{width:165px}
+.modal-dialog.activate-dialog form .input-wrapper label.info{display:inline-block;width:88px}
+.modal-dialog.activate-dialog form .input-wrapper label.error{display:block;margin-top:15px;margin-left:88px;color:#c33}
+.modal-dialog.activate-dialog form .input-wrapper .resend-code{margin-left:13px;color:#999;background:0 0;border:0;cursor:pointer}
+.modal-dialog.activate-dialog form .submit{float:right;margin-bottom:5px}
+.ee-modal-dialog{width:475px}
+@media (max-height:470px){.avatar-edit-dialog>.modal-dialog-content{padding:0}
+.avatar-edit-dialog>.modal-dialog-title{display:none}
+.votebar-mobile-dialog .modal-dialog-content{padding:35px 40px 20px;margin:0}
+.votebar-mobile-dialog .modal-dialog-title{background:#fff;border:0;box-shadow:none;text-indent:-999em;height:0;padding:0}
+.votebar-mobile-dialog .modal-dialog-title-close{position:absolute;top:1px;right:-14px;background-position:-10px -167px;width:30px;height:30px}

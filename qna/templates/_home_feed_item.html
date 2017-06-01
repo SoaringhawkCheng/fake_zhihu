@@ -1,0 +1,97 @@
+<div class="feed-item folding feed-item-hook feed-item-0" feed-item-a="" data-type="a" id="feed-0" data-za-module="FeedItem" data-za-index="">
+	<div class="feed-item-inner">
+		<div class="avatar">
+			<a title="互联网" data-hovercard="t$t$19550517" class="zm-item-link-avatar" href="" target="_blank"><img src="https://pic4.zhimg.com/f07808da5625fef3607f8b75b770349f_m.jpg" class="side-topic-avatar"></a>
+		</div>
+		<div class="feed-main">
+			<div class="feed-source" data-za-module="FeedSource">
+			来自话题: <a href="" data-hovercard="t$b$19550517" data-token="19550517" data-topicid="99" data-follow="1" data-interest="1" target="_blank" data-za-element-name="Title">互联网</a>
+			</div>
+			<div class="feed-content" data-za-module="AnswerItem">
+				<meta itemprop="answer-id" content="60928324">
+				<meta itemprop="answer-url-token" content="169723764">
+				<h2 class="feed-title"><a class="question_link" href="{{ url_for('site.question', id=q.id) }}" target="_blank" data-id="4280818" data-za-element-name="Title">{{ q.title }}</a></h2>
+				<div class="expandable entry-body">
+					<link itemprop="url" href="">
+					<div class="zm-item-vote">
+						<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-bind-votecount="">0</a>
+					</div>
+
+					<div class="zm-votebar" data-za-module="VoteBar">
+						<button class="up" aria-pressed="false" title="赞同">
+							<i class="icon vote-arrow"></i>
+							<span class="count">0</span>
+							<span class="label sr-only">赞同</span>
+						</button>
+						<button class="down" aria-pressed="false" title="反对，不会显示你的姓名">
+							<i class="icon vote-arrow"></i>
+							<span class="label sr-only">反对，不会显示你的姓名</span>
+						</button>
+					</div>
+					<div class="zm-item-answer-author-info">
+						<span class="summary-wrapper">
+							<span class="author-link-line">
+							<a class="author-link" data-hovercard="p$t$ying-xiong-lian-meng-56-33" target="_blank" href="">{% if q.answers.count() %}{{  q.answers[0].author.fullname }}{% endif %}</a></span><span title="用户签名" class="bio">
+							用户签名</span>
+						</span>
+					</div>
+
+					<div class="zm-item-vote-info" data-votecount="0" data-za-module="VoteInfo">
+						<span class="answer-tag">
+							<span class="text">收录于 </span>
+							<a class="text" data-tooltip="s$t$电竞风云 · 德玛西亚之力" href="/roundtable/lol">知乎圆桌</a>
+							<span class="text">、</span>
+							<span class="text">编辑推荐</span>
+						</span>
+
+						<span class="zg-bull text">•</span><span class="voters text"><a href="#" class="more text"><span class="js-voteCount">0</span>&nbsp;人赞同</a></span>
+					</div>
+					<div class="zm-item-rich-text expandable js-collapse-body" data-resourceid="4280818" data-action="/answer/content" data-author-name="英雄联盟" data-entry-url="/question/30246012/answer/169723764">
+
+						<textarea hidden="" class="content">{% if q.answers.count() %}{{  q.answers[0].content_html }}{% endif %}</textarea>
+
+						<div class="zh-summary summary clearfix">
+							{% if q.answers.count() %}
+								{% if q.answers[0].summary_img_url %}
+								<img src="{{ q.answers[0].summary_img_url }}" class="origin_image inline-img zh-lightbox-thumb">
+								{% else %}
+								<!-- <img src="https://pic1.zhimg.com/v2-b6bc7da521ae6cc1b82d9e20edba2bcc_200x112.png" data-rawwidth="589" data-rawheight="348" class="origin_image inline-img zh-lightbox-thumb" data-original="https://pic1.zhimg.com/v2-b6bc7da521ae6cc1b82d9e20edba2bcc_r.png"> -->
+								{% endif %}
+							{{  q.answers[0].content_html | striptags | truncate(160) }}
+							{% endif %}
+							<a href="" class="toggle-expand">显示全部</a>
+						</div>
+						<p class="visible-expanded"><a itemprop="url" class="answer-date-link meta-item" target="_blank" href="">发布于 2017-05-15</a></p>
+					</div>
+				</div>
+				<div class="feed-meta">
+					<div class="zm-item-meta answer-actions clearfix js-contentActions">
+						<div class="zm-meta-panel">
+							<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-4280818"><i class="z-icon-follow"></i>关注问题</a>
+							<a href="#" name="addcomment" class="meta-item toggle-comment js-toggleCommentBox">
+							<i class="z-icon-comment"></i>{{ q.comments.count() }} 条评论</a>
+							<a href="#" class="meta-item zu-autohide js-thank" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+							<a href="#" class="meta-item zu-autohide js-collect"><i class="z-icon-collect"></i>收藏</a>
+							<span class="zg-bull zu-autohide">•</span>
+							<a href="#" class="meta-item zu-autohide js-noHelp">没有帮助</a>
+							<span class="zg-bull zu-autohide">•</span>
+							<a href="#" class="meta-item zu-autohide js-report">举报</a>
+							<meta name="copyrightStatus" content="0">
+							<meta name="disableCopyAvatar" content="https://pic2.zhimg.com/v2-123b568cebf23455ee3231de0f473899_s.jpg">
+
+							<span class="zg-bull">•</span>
+							<a href="/terms#sec-licence-6" target="_blank" class="meta-item copyright">禁止转载</a>
+							<button class="meta-item item-collapse js-collapse"><i class="z-icon-fold"></i>收起</button>
+						</div>
+					</div>
+					<a href="#" class="ignore zu-autohide" name="dislike" data-tooltip="s$b$不感兴趣"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="undo-dislike-options" data-item_id="0">
+		此内容将不会在动态中再次显示 <span class="zg-bull">•</span> <a href="#" class="meta-item revert">撤销</a>
+		<a href="#" class="ignore zu-autohide close"></a>
+	</div>
+</div>

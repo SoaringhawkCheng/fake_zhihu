@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+
+{% block title %}
+发现 - {{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="zg-wrap zu-main clearfix " role="main">
+	<div class="zu-main-content">
+		<div class="zu-main-content-inner">
+			<div id="zh-recommend">
+				<div id="zh-recommend-title" class="page-title">
+					<i class="zg-icon zg-icon-feedlist"></i>
+					<span>编辑推荐</span>
+					<a href="" class="zg-link-gray zg-right" data-za-c="explore" data-za-a="visit_explore_recommendations" data-za-l="editor_recommendations_more"><span>更多推荐 »</span></a>
+				</div>
+				<div id="zh-recommend-list">
+					<div class="top-recommend-feed feed-item">
+						<h2><a class="question_link" href="" target="_blank" data-id="6868554" data-za-element-name="Title">
+						对机器人或人工智能的研究能帮助人类更了解自身吗？
+						</a></h2>
+						<div class="avatar">
+							<a title="YY硕" data-hovercard="p$t$yyss2037" class="zm-item-link-avatar" target="_blank" href="">
+							<img src="https://pic3.zhimg.com/0db1bed5bf68b3e612a6224a45cb9786_m.jpg" class="zm-item-img-avatar">
+							</a>
+						</div>
+
+						<div class="feed-main">
+							<div class="zm-item-answer-author-info">
+								<span class="summary-wrapper">
+									<span class="author-link-line">
+									<a class="author-link" data-hovercard="p$t$yyss2037" target="_blank" href="">YY硕</a><span class="icon icon-badge-best_answerer icon-badge" data-tooltip="s$b$优秀回答者"></span></span>
+									<span class="badge-summary"><a href="" target="_blank">机器人话题优秀回答者</a></span>
+									<span title="机器人工程师" class="bio">
+									机器人工程师
+									</span>
+								</span>
+							</div>
+							<div class="zm-item-rich-text" data-resourceid="6868554" data-action="/answer/content">
+								<div class="zh-summary summary clearfix">
+									<img src="https://pic2.zhimg.com/23cd773941268f9a53bb135b6880ea6d_200x112.png" data-rawwidth="1058" data-rawheight="794" class="origin_image inline-img zh-lightbox-thumb" data-original="https://pic2.zhimg.com/23cd773941268f9a53bb135b6880ea6d_r.png">
+									这个问题我想从大往小里谈一谈我的浅见。 作为一个喜欢历史的工程师，我觉得人类的历史，其实是一部人和机器共同进步的历史。人类和猴子的区别在于会不会使用工具，有了手中的骨片、石片这样的工具，人类才开始被称为人类；成百上千年过去，人类手中的工具…
+								</div>
+							</div>
+						</div>
+					</div>
+
+					{% for i in range(4) %}
+					<div class="recommend-feed feed-item">
+						<span class="zg-right zg-gray-normal feed-meta">文章</span>
+						<h2><a class="post-link" target="_blank" href="https://zhuanlan.zhihu.com/p/26960883" data-za-element-name="Title">沉浮 60 年——民族汽车品牌红旗发展史（下）</a></h2>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+
+			<div class="explore-tab" id="js-explore-tab">
+				<a class="zg-anchor-hidden" name="daily-hot"></a>
+				<a class="zg-anchor-hidden" name="monthly-hot"></a>
+				<ul class="tab-navs clearfix">
+					<li class="tab-nav active"><a class="anchor" href="#daily-hot" data-za-c="explore" data-za-a="visit_explore_daily_trendings" data-za-l="explore_daily_trendings">今日最热</a></li>
+					<li class="tab-nav"><a class="anchor" href="#monthly-hot" data-za-c="explore" data-za-a="visit_explore_monthly_trendings" data-za-l="explore_monthly_trendings">本月最热</a></li>
+				</ul>
+				<div class="tab-panel" style="display: block;">
+					<div data-type="daily">
+						{% for i in range(4) %}
+						<div class="explore-feed feed-item" data-offset="1" data-za-module="AnswerItem">
+							<h2><a class="question_link" href="/question/60207280/answer/174231806" target="_blank" data-id="16306209" data-za-element-name="Title">
+							周星驰电影真的有泪点吗？
+							</a></h2>
+							<div tabindex="-1" class="zm-item-answer " itemscope="" itemtype="http://schema.org/Answer" data-aid="61750303" data-atoken="174231806" data-collapsed="0" data-created="1495680254" data-deleted="0" data-isowner="0" data-helpful="1" data-copyable="1">
+								<link itemprop="url" href="/question/60207280/answer/174231806">
+								<meta itemprop="answer-id" content="61750303">
+								<meta itemprop="answer-url-token" content="174231806">
+								<a class="zg-anchor-hidden" name="answer-61750303"></a>
+								<div class="zm-item-vote">
+									<a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-bind-votecount="">56</a>
+								</div>
+
+								<div class="zm-votebar" data-za-module="VoteBar">
+									<button class="up" aria-pressed="false" title="赞同">
+										<i class="icon vote-arrow"></i>
+										<span class="count">56</span>
+										<span class="label sr-only">赞同</span>
+									</button>
+									<button class="down" aria-pressed="false" title="反对，不会显示你的姓名">
+										<i class="icon vote-arrow"></i>
+										<span class="label sr-only">反对，不会显示你的姓名</span>
+									</button>
+								</div>
+
+								<div class="answer-head">
+									<div class="zm-item-answer-author-info">
+										<span class="summary-wrapper">
+										<span class="author-link-line">
+										<a class="author-link" data-hovercard="p$t$wu-yan-zu-56-18" target="_blank" href="">吳彥祖</a></span><span title="爱香港 喜电影 听摇滚" class="bio">
+										爱香港 喜电影 听摇滚
+										</span>
+										</span>
+									</div>
+
+									<div class="zm-item-vote-info" data-votecount="56" data-za-module="VoteInfo">
+										<span class="voters text"><a href="#" class="more text"><span class="js-voteCount">56</span>&nbsp;人赞同</a></span>
+									</div>
+								</div>
+
+								<div class="zm-item-rich-text expandable js-collapse-body" data-resourceid="16306209" data-action="/answer/content" data-author-name="吳彥祖" data-entry-url="/question/60207280/answer/174231806">
+									<textarea hidden="" class="content">第一个肯定要说已经被说烂了的《喜剧之王》&lt;br&gt;尹天仇是一个有演员梦想 却只能在片场跑龙套的市井小人物 因为一次拍摄时“不想死” 害得整场戏被重拍 被赶走之后去拿盒饭 第一个泪点就来了&lt;img data-rawwidth="1136" data-rawheight="640" src="https://pic4.zhimg.com/v2-fe7f2beb850bb9765893c3bbfa35183b_b.png" class="origin_image zh-lightbox-thumb" width="1136" data-original="https://pic4.zhimg.com/v2-fe7f2beb850bb9765893c3bbfa35183b_r.png"&gt;&lt;br&gt;&lt;img data-rawwidth="1136" data-rawheight="640" src="https://pic1.zhimg.com/v2-5d1451fd83bf4d91d37f64d2a200eb04_b.png" class="origin_image zh-lightbox-thumb" width="1136" data-original="https://pic1.zhimg.com/v2-5d1451fd83bf4d91d37f64d2a200eb04_r.png"&gt;</textarea>
+									<div class="zh-summary summary clearfix" style="display: block;">
+										<img data-rawwidth="1136" data-rawheight="640" src="https://pic4.zhimg.com/v2-fe7f2beb850bb9765893c3bbfa35183b_200x112.png" class="origin_image inline-img zh-lightbox-thumb" data-original="https://pic4.zhimg.com/v2-fe7f2beb850bb9765893c3bbfa35183b_r.png">
+										第一个肯定要说已经被说烂了的《喜剧之王》 尹天仇是一个有演员梦想 却只能在片场跑龙套的市井小人物 因为一次拍摄时“不想死” 害得整场戏被重拍 被赶走之后去拿盒饭 第一个泪点就来了 被放饭的大叔臭骂一顿 这个场景让人想起《大话西游》里经典台词“那个…
+										<a href="" class="toggle-expand">显示全部</a>
+									</div>
+									<p class="visible-expanded"><a itemprop="url" class="answer-date-link meta-item" data-tooltip="s$t$发布于 昨天 10:44" target="_blank" href="/question/60207280/answer/174231806">编辑于 昨天 22:34</a></p>
+								</div>
+
+								<div class="zm-item-meta answer-actions clearfix js-contentActions">
+									<div class="zm-meta-panel">
+										<a data-follow="q:link" class="follow-link zg-follow meta-item" href="javascript:;" id="sfb-16306209"><i class="z-icon-follow"></i>关注问题</a>
+
+										<a href="#" name="addcomment" class="meta-item toggle-comment js-toggleCommentBox">
+										<i class="z-icon-comment"></i>15 条评论</a>
+
+										<a href="#" class="meta-item zu-autohide js-thank" data-thanked="false"><i class="z-icon-thank"></i>感谢</a>
+
+										<a href="#" class="meta-item zu-autohide js-share goog-inline-block goog-menu-button" role="button" aria-expanded="false" tabindex="0" aria-haspopup="true" style="-webkit-user-select: none;"><div class="goog-inline-block goog-menu-button-outer-box"><div class="goog-inline-block goog-menu-button-inner-box"><div class="goog-inline-block goog-menu-button-caption"><i class="z-icon-share"></i>分享</div><div class="goog-inline-block goog-menu-button-dropdown">&nbsp;</div></div></div></a>
+
+										<a href="#" class="meta-item zu-autohide js-collect"><i class="z-icon-collect"></i>收藏</a>
+
+										<span class="zg-bull zu-autohide">•</span>
+
+										<a href="#" class="meta-item zu-autohide js-noHelp">没有帮助</a>
+
+										<span class="zg-bull zu-autohide">•</span>
+										<a href="#" class="meta-item zu-autohide js-report">举报</a>
+
+										<meta name="copyrightStatus" content="1">
+										<meta name="disableCopyAvatar" content="">
+										<span class="zg-bull">•</span>
+
+										<a href="/terms#sec-licence-1" target="_blank" class="meta-item copyright">
+										作者保留权利
+										</a>
+
+										<button class="meta-item item-collapse js-collapse">
+											<i class="z-icon-fold"></i>收起
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

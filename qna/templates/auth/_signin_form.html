@@ -1,0 +1,47 @@
+
+<form method="POST" novalidate="novalidate" action="{{ url_for('site.signin') }}">
+	
+	<div class="group-inputs">
+		<div class="account input-wrapper">
+			<input type="text" name="account" aria-label="手机号或邮箱" placeholder="邮箱或邮箱" required="">
+		</div>
+		<div class="verification input-wrapper">
+			<input type="password" name="password" aria-label="密码" placeholder="密码" required=""><button type="button" class="send-code-button">获取验证码</button>
+		</div>
+
+		<div class="input-wrapper captcha-module" data-type="en">
+			<input id="captcha" name="captcha" placeholder="验证码" required="" data-rule-required="true" data-msg-required="请填写验证码">
+			<div class="captcha-container">
+				<img class="js-refreshCaptcha captcha" width="120" height="30" data-tooltip="s$t$看不清楚？换一张" alt="验证码">
+			</div>
+		</div>
+
+	</div>
+	<div class="button-wrapper command">
+		<button class="sign-button submit" type="submit">登录</button>
+	</div>
+	<div class="signin-misc-wrapper clearfix">
+		<button type="button" class="signin-switch-button">手机验证码登录</button>
+		<a class="unable-login" href="#">无法登录？</a>
+	</div>
+
+	<div class="social-signup-wrapper" data-za-module="SNSSignIn">
+		<span class="name js-toggle-sns-buttons">社交帐号登录</span>
+		<div class="sns-buttons">
+			<a title="微信登录" class="js-bindwechat" href="#"><i class="sprite-index-icon-wechat"></i></a>
+			<a title="微博登录" class="js-bindweibo" href="#"><i class="sprite-index-icon-weibo"></i></a>
+			<a title="QQ 登录" class="js-bindqq" href="#"><i class="sprite-index-icon-qq"></i></a>
+		</div>
+	</div>
+</form>
+
+<div class="QRCode">
+	<button class="QRCode-toggleButton">
+		<span class="sprite-global-icon-qrcode"></span>
+		<span class="QRCode-toggleButtonText ">下载知乎 App</span>
+	</button>
+	<div class="QRCode-card">
+		<div class="QRCode-image"></div>
+		<div class="sprite-index-icon-arrow"></div>
+	</div>
+</div>

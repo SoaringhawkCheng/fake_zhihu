@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ key_word }} - 搜索结果 - {{ super() }}
+{% endblock %}
+
+{% block head %}
+{{ super() }}
+
+{% endblock %}
+
+{% block content %}
+<div class="zg-wrap zu-main clearfix" role="main">
+	<div class="zu-main-content">
+		<div class="zu-main-content-inner">
+			<div class="search-tabs">
+				<ul class="tab-navs">
+					<li class="tab-nav active">
+						<a href="">内容</a>
+					</li>
+					<li class="tab-nav">
+						<a href="">用户</a>
+					</li>
+					<li class="tab-nav">
+						<a href="">话题</a>
+					</li>
+				</ul>
+			</div>
+			<div class="range-selector">
+				<div class="secondary-tabs">
+					<span>按相关度排序</span>
+					<span class="secondary-tab-divider"></span>
+					<a href="">按赞同数排序</a>
+				</div>
+				<div class="Sorter">
+					<span class="lbl">时间不限</span>
+					<a class="lbl" href="">一天内</a>
+					<a class="lbl" href="">一周内</a>
+					<a class="lbl" href="">三个月内</a>
+					<i class="zg-icon zg-icon-double-arrow"></i>
+				</div>
+			</div>
+			<ul class="list contents navigable">
+				{% for item in results %}
+				<li class="item clearfix">
+					<div class="title">
+						<a target="_blank" href="{{ url_for('site.question', id=item.id) }}" class="js-title-link">
+							{#<em>Python</em> 有那么神吗？#}
+							{{ item.title }}
+						</a>
+					</div>
+					{% if item.answers.count() != 0 %}
+					<div class="content">
+						<div class="entry answer">
+							<div class="entry-left hidden-phone">
+								<a class="zm-item-vote-count hidden-expanded js-expand js-vote-count" data-bind-votecount="">0</a>
+							</div>
+						</div>
+						<div class="entry-body">
+							<div class="entry-meta">
+								<div class="author-line summary-wrapper">
+									<span class="author-link-line">
+										<a class="author author-link" href="">
+										{{ item.answers[0].author.fullname }}
+										</a>
+									</span>
+									<span class="bio">这里是简介</span>
+								</div>
+							</div>
+							<div class="entry-content js-collapse-body">
+								<div class="summary hidden-expanded">
+									{{ item.answers[0].content[:300] }}
+									<a class="toggle-expand inline" href="javascript:;">显示全部</a>
+								</div>
+							</div>
+							<div class="actions clearfix js-contentActions">
+								<a href="javascript:;" class="action-item zg-follow">
+									<i class="fa fa-plus"></i>
+									关注问题
+								</a>
+								<a href="javascript:;" class="action-item js-toggleCommentBox">
+									<i class="fa fa-comment-o"></i>
+									{{ item.answers[0].comments.count() }} 条评论
+								</a>
+								<a href="javascript:;" target="_blank" class="action-item js-copyright hidden-phone">作者保留权利</a>
+							</div>
+						</div>
+					</div>
+					{% else %}
+					<div class="content">
+						<div class="actions js-contentActions">
+							<a href="javascript:;" class="action-item">
+								<i class="fa fa-plus"></i>
+								关注问题
+							</a>
+							<span class="zg-bull" style="color: #999;">•</span>
+							<a href="javascript:;" class="action-item">0 人关注</a>
+							<span class="zg-bull" style="color: #999;">•</span>
+							<a href="javascript:;" class="action-item">0 个回答</a>
+						</div>
+					</div>
+					{% endif %}
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="zu-main-sidebar">
+		<div class="sidebar-content"></div>
+	</div>
+</div>
+{% endblock %}

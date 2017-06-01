@@ -1,0 +1,29 @@
+<div class="modal" id="askModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h1 class="modal-title-text">提问</h1>
+			</div>
+			<div class="modal-body">
+				<form class="add-question-form" method="POST" action="{{ url_for('site.ask_question') }}">
+					<div class="question-title">
+		      			<textarea class="form-control" rows="1" placeholder="写下你的问题" name="title"></textarea>
+		      		</div>
+		        	<div class="question-content">
+		        		<span class="content-head">问题说明（可选）：</span>
+		        		<textarea class="form-control" rows="3" placeholder="问题背景、条件等详细信息" name="content"></textarea>
+		        	</div>
+		        	<div class="question-footer">
+		        		<span class="footer-head">选择话题：</span>
+		        		<input type="text" class="form-control" placeholder="暂不可用" disabled="">
+		        	</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-primary submit">发布</button>
+			</div>
+		</div>
+	</div>
+</div>
